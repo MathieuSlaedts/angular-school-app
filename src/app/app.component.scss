@@ -1,0 +1,51 @@
+/*
+ *
+ * Imports
+ *
+ */
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import "~src/app/styles/global/_colors.scss";
+ 
+/*
+ *
+ * Component Styles
+ *
+ */
+
+.SA-app-wrapper {
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    grid-template-rows: 4rem 1fr 1.5rem;
+    min-height: 100vh;
+}
+
+.SA-app-header-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+.SA-app-nav-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+.SA-app-main {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+.SA-app-footer-container {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: stretch;
+    align-self: stretch;
+}

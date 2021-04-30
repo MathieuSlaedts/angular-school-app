@@ -1,0 +1,202 @@
+/*
+ *
+ * Imports
+ *
+ */
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import "~src/app/styles/global/_colors.scss";
+
+/*
+ *
+ * Bootstrap override - colors
+ *
+ */
+
+.btn-primary {
+    background-color: $indigo;
+    border-color: $indigo;
+
+    &:hover {
+        background-color: $indigo-700;
+        border-color: $indigo-700;
+    }
+}
+
+a {
+    color: $indigo;
+
+    &:hover {
+        color: $indigo-700;
+    }
+}
+
+/*
+ *
+ * Bootstrap override - .nav-tab
+ *
+ */
+
+.nav-tabs .nav-item {
+    border-radius: 0;
+}
+
+.nav-tabs .nav-item + .nav-item {
+    margin-left: 1rem;
+}
+
+.nav-tabs .nav-link {
+    color: $gray-700;
+    border: 0;
+    padding: .5rem .1rem;
+    position: relative;
+    
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $indigo-300;
+        opacity: 0;
+        transition: all .3s ease-out;
+    }
+
+    &:hover{
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: #495057;
+    background-color: #fff;
+    border: 0;
+    
+    &::after {
+        background-color: $indigo;
+        opacity: 1; 
+    }
+}
+
+/*
+ *
+ * Global Styles
+ *
+ */
+
+body {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    color: $indigo-900;
+}
+
+ a {
+    transition: all .3s ease-out;
+ }
+
+.SA-app-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4rem 1fr;
+
+    .SA-app-section__header {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        border-bottom: 1px solid $gray-200;
+    }
+
+    .SA-app-section__content {
+        padding: 2rem;
+    }
+}
+
+/*
+ *
+ * SA-content
+ *
+ */
+
+.SA-nav-secondary {
+    margin-bottom: 2rem;
+}
+
+/*
+ *
+ * SA-content
+ *
+ */
+
+.SA-content {
+    padding: 2rem;
+    background-color: $gray-100;
+}
+
+/*
+ *
+ * SA-content
+ *
+ */
+
+.SA-list {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.SA-list__item {
+    display: flex;
+    padding: .55rem;
+
+    &:hover {
+        box-shadow: $box-shadow-sm;
+    }
+}
+
+.SA-list__item + .SA-list__item {
+    border-top: 1px solid $gray-300;
+}
+
+.SA-list__item__title,
+.SA-list__item__link {
+    padding: .20rem;
+    margin: 0;
+}
+
+.SA-list__item__title {
+    margin-right: auto;
+    color: $gray-600;
+}
+
+.SA-list__item:hover .SA-list__item__title {
+    color: $gray-900;
+}
+
+.SA-list__item__link {
+    font-size: .9rem;
+    border-left: 1px solid $gray-200;
+}
+
+.SA-list__item__link a {
+    color: $gray-600;
+    text-decoration: none;
+}
+
+.SA-list__item:hover .SA-list__item__link a {
+    color: $indigo;
+
+    &:hover {    
+        color: $indigo-700;
+        text-decoration: underline;
+    }
+}
+

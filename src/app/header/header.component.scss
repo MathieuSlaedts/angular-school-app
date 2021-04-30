@@ -1,0 +1,38 @@
+/*
+ *
+ * Imports
+ *
+ */
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import "~src/app/styles/global/_colors.scss";
+
+ /*
+ *
+ * Component Styles
+ *
+ */
+
+.SA-app-header {
+    height: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    background-color: $gray-100;
+    border-right: 1px solid $gray-200;
+    border-bottom: 1px solid $gray-200;
+}
+ 
+h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 0;
+    color: $primary;
+
+    span {
+        color: $primary;
+    }
+}
