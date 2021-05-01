@@ -1,0 +1,11 @@
+<ul class="SA-nav-secondary nav nav-tabs">
+    <li class="nav-item" *ngFor="let el of elements">
+        <a
+            href="#"
+            class="nav-link"
+            routerLink="{{ el.target }}"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+        >{{ el.label }}</a>
+    </li>
+</ul>

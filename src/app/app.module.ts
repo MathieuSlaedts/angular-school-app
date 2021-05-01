@@ -3,24 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProfessorsComponent } from './professors/professors.component';
-import { NavComponent } from './nav/nav.component';
-import { UserBoxComponent } from './user-box/user-box.component';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
+import { ProfessorsComponent } from './modules/professors/pages/professors.component';
+import { NavComponent } from './core/nav/nav.component';
+import { UserBoxComponent } from './core/user-box/user-box.component';
+import { ModalComponent } from './shared/components/modal/modal.component';
+import { ListComponent } from './shared/components/list/list.component';
+import { NavTabsComponent } from './shared/components/nav-tabs/nav-tabs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
+    DashboardComponent,
     PageNotFoundComponent,
     ProfessorsComponent,
     NavComponent,
-    UserBoxComponent
+    UserBoxComponent,
+    ModalComponent,
+    ListComponent,
+    NavTabsComponent
   ],
   imports: [
     BrowserModule,

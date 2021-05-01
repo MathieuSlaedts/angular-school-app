@@ -1,0 +1,25 @@
+<ul class="SA-list">
+    <li class="SA-list__item" *ngFor="let i of [].constructor(5), let index = index">
+        <div class="SA-list__item__inner">
+            <p class="SA-list__item__title">John Doe</p>
+            <p class="SA-list__item__link">
+                <a href="">Voir les détails</a>
+            </p>
+            <p class="SA-list__item__link">
+                <a href="">Modifier</a>
+            </p>
+            <p class="SA-list__item__link">
+                <a data-bs-toggle="collapse" href="#SA-list__item__collapse-{{ index }}" aria-expanded="false"
+                    aria-controls="SA-list__item__collapse-{{ index }}">Supprimer</a>
+            </p>
+        </div>
+        <div class="collapse" id="SA-list__item__collapse-{{ index }}">
+            <div class="SA-list__item__collapse">
+                <div class="alert alert-primary" role="alert">
+                    <span>Cette action est irréversible. Voulez-vous supprimer l'élément {{ index }} ?</span>
+                    <button class="btn btn-primary">Supprimer</button>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
