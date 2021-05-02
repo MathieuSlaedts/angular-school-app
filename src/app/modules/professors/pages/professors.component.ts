@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PageTitleService } from 'src/app/core/services/page-title.service';
 import { NavTabElement } from 'src/app/shared/models/nav-tabs.model';
 
 @Component({
@@ -7,8 +8,10 @@ import { NavTabElement } from 'src/app/shared/models/nav-tabs.model';
   styleUrls: ['./professors.component.scss']
 })
 export class ProfessorsComponent implements OnInit {
+
+  pageTitle: string = "Professeurs";
   
-  navTabsElements: NavTabElement[] = [
+  subNav: NavTabElement[] = [
     {
       target: "/professeurs",
       label: "Liste des professeurs"
@@ -19,7 +22,8 @@ export class ProfessorsComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private pageTitleService: PageTitleService) {
+    this.pageTitleService.setTitle(this.pageTitle);}
 
   ngOnInit(): void {
   }

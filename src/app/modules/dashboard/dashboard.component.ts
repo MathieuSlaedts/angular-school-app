@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageTitleService } from 'src/app/core/services/page-title.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  pageTitle: string = "Tableau de bord"
+
+  constructor(private pageTitleService: PageTitleService) {
+    this.pageTitleService.setTitle(this.pageTitle);
+  }
 
   ngOnInit(): void {
   }

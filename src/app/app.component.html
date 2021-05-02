@@ -3,7 +3,14 @@
     <div class="SA-app-nav-container" app-nav></div>
     <div class="SA-app-user-box-container" app-user-box></div>
     <main class="SA-app-main">
-        <router-outlet></router-outlet>
+        <section class="SA-home SA-app-section">
+            <div class="SA-app-section__header">
+                <h2>{{ pageTitle }}</h2>
+            </div>
+            <div class="SA-app-section__content">
+                <router-outlet></router-outlet>
+            </div>
+        </section>
     </main>
     <div class="SA-app-footer-container" app-footer></div>
 </div>

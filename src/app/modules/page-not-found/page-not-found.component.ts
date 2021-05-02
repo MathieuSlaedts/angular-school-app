@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageTitleService } from 'src/app/core/services/page-title.service';
 
 @Component({
   selector: 'app-page-not-found',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageNotFoundComponent implements OnInit {
 
-  constructor() { }
+  pageTitle: string = "Contenu introuvable";
+
+  constructor(private pageTitleService: PageTitleService) {
+    this.pageTitleService.setTitle(this.pageTitle);
+  }
 
   ngOnInit(): void {
   }
